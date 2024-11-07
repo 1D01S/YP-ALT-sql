@@ -1,0 +1,38 @@
+CREATE TABLE Client (
+    ClientID INT PRIMARY KEY,
+    Name VARCHAR(100),
+    ContactInfo VARCHAR(100)
+);
+
+CREATE TABLE Equipment (
+    EquipmentID INT PRIMARY KEY,
+    Name VARCHAR(100),
+    SerialNumber VARCHAR(100)
+);
+
+CREATE TABLE Request (
+    RequestID INT PRIMARY KEY,
+    CreationDate DATE,
+    EquipmentID INT,
+    FaultType VARCHAR(100),
+    ProblemDescription TEXT,
+    ClientID INT,
+    Status VARCHAR(20),
+    FOREIGN KEY (EquipmentID) REFERENCES Equipment(EquipmentID),
+    FOREIGN KEY (ClientID) REFERENCES Client(ClientID)
+);
+
+CREATE TABLE Executor (
+    ExecutorID INT PRIMARY KEY,
+    Name VARCHAR(100),
+    ContactInfo VARCHAR(100)
+);
+
+CREATE TABLE Report (
+    ReportID INT PRIMARY KEY,
+    RequestID INT,
+    ReportDescription TEXT,
+    Costs DECIMAL(10, 2),
+    FOREIGN KEY (RequestID) REFERENCES Request(RequestID)
+);
+
