@@ -1,0 +1,17 @@
+INSERT INTO Client (ClientID, Name, ContactInfo) VALUES (1, 'Иванов Иван', 'ivanov@mail.com');
+INSERT INTO Client (ClientID, Name, ContactInfo) VALUES (2, 'Петров Пётр', 'petrov@mail.com');
+INSERT INTO Client (ClientID, Name, ContactInfo) VALUES (3, 'Сидорова Анна', 'sidorova@mail.com');
+INSERT INTO Client (ClientID, Name, ContactInfo) VALUES (4, 'Кузнецов Алексей', 'kuznetsov@mail.com');
+INSERT INTO Client (ClientID, Name, ContactInfo) VALUES (5, 'Федорова Светлана', 'fedorova@mail.com');
+
+INSERT INTO Equipment (EquipmentID, Name, SerialNumber) VALUES (1, 'Принтер', '12345ABC');
+INSERT INTO Equipment (EquipmentID, Name, SerialNumber) VALUES (2, 'Сканер', '67890XYZ');
+INSERT INTO Equipment (EquipmentID, Name, SerialNumber) VALUES (3, 'Ноутбук', '54321DEF');
+INSERT INTO Equipment (EquipmentID, Name, SerialNumber) VALUES (4, 'Проектор', '98765GHI');
+INSERT INTO Equipment (EquipmentID, Name, SerialNumber) VALUES (5, 'МФУ', '13579JKL');
+
+INSERT INTO Request (RequestID, CreationDate, EquipmentID, FaultType, ProblemDescription, ClientID, Status) VALUES (1, '2023-11-01', 1, 'Не печатает', 'Принтер не реагирует на команды', 1, 'в ожидании');
+INSERT INTO Request (RequestID, CreationDate, EquipmentID, FaultType, ProblemDescription, ClientID, Status) VALUES (2, '2023-11-02', 2, 'Не сканирует', 'Сканер зависает при работе', 2, 'в работе');
+INSERT INTO Request (RequestID, CreationDate, EquipmentID, FaultType, ProblemDescription, ClientID, Status) VALUES (3, '2023-11-03', 3, 'Зависает', 'Ноутбук очень медленный', 3, 'в ожидании');
+INSERT INTO Request (RequestID, CreationDate, EquipmentID, FaultType, ProblemDescription, ClientID, Status) VALUES (4, '2023-11-04', 4, 'Нет изображения', 'Проектор не показывает изображение', 4, 'в работе');
+INSERT INTO Request (RequestID, CreationDate, EquipmentID, FaultType, ProblemDescription, ClientID, Status) VALUES (5, '2023-11-05', 5, 'Не принимает задания', 'МФУ не обрабатывает задания', 5, 'выполнено');
